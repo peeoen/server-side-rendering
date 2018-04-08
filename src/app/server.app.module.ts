@@ -1,10 +1,13 @@
 import { AppModule } from './app.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
+import {
+    ServerModule,
+    ServerTransferStateModule // <--- Added
+} from '@angular/platform-server';
+import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
 import { AppComponent } from './app.component';
-import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader';
 
 @NgModule({
     declarations: [],
@@ -15,7 +18,7 @@ import { ModuleMapLoaderModule } from '@nguniversal/module-map-ngfactory-loader'
         ServerModule,
         AppModule,
         ModuleMapLoaderModule,
-        ServerTransferStateModule
+        ServerTransferStateModule // <--- Added
     ],
     providers: [],
     bootstrap: [AppComponent]

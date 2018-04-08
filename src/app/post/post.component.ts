@@ -20,7 +20,6 @@ export class PostComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.tstate);
         if (this.tstate.hasKey(RESULT_KEY)) {
             // We are in the browser
             this.result = this.tstate.get(RESULT_KEY, '');
