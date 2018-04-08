@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "start": "node server.js",
+    "build": "ng build --app 0 --prod && ng build --prod --app 1 --output-hash none",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,7 +23,9 @@
     "@angular/platform-server": "^5.2.9",
     "@angular/router": "^5.2.0",
     "@nguniversal/express-engine": "^5.0.0",
+    "@nguniversal/module-map-ngfactory-loader": "^5.0.0",
     "core-js": "^2.4.1",
+    "express": "^4.16.3",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
